@@ -32,7 +32,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Budget Input Module-->
-            <div class="col-xl-7 col-lg-7">
+            <div class="col-xl-7 col-lg-7 ">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Budget App</h6>
@@ -50,17 +50,91 @@
                           </div>
                         </div>
                       </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                      <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
+                      <!-- budget form -->
+                      <form id="budget-form" class="py-4 budget-form">
+                       <h5 class="text-capitalize">please enter your budget</h5>
+                       <div class="form-group">
+                        <input type="number" class="form-control budget-input" id="budget-input">
+                       </div>
+                       <!-- submit button -->
+                       <button type="submit" class="btn btn-primary btn-icon-split text-capitalize budget-submit" id="budget-submit"><span class="text">Calculate</span></button>
+                      </form>
+                      <!-- expense feedback -->
+                      <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
+                      <!-- expense form -->
+                      <form id="expense-form" class=" expense-form">
+                      <h5 class="text-capitalize">please enter your expense</h5>
+                      <div class="form-group">
+                        <input type="text" class="form-control expense-input" id="expense-input">
+                      </div>
+                      <h5 class="text-capitalize">please enter expense amount</h5>
+                      <div class="form-group">
+                        <input type="number" class="form-control expense-input" id="amount-input">
+                      </div>
+                      <!-- submit button -->
+                      <button type="submit" class="btn btn-primary btn-icon-split text-capitalize expense-submit" id="expense-submit"><span class="text">Add Expense</span></button>
+                      </form>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5">
               <div class="card shadow mb-4">
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 class="m-0 font-weight-bold text-primary">Finance Report</h6>
+                      <h6 class="m-0 font-weight-bold text-success">Finance Report</h6>
                   </div>
                   <div class="card-body">
-                    
+                    <div class="row my-3">
+                      <div class="col-4 text-center mb-2 ">
+                       <h6 class="text-uppercase info-title text-md font-weight-bold text-success text-uppercase mb-1">budget</h6>
+                       <span class="budget-icon"><i class="fas fa-money-bill-alt text-success"></i></span>
+                       <h4 class="text-uppercase mt-2 budget" id="budget"><span>$ </span><span id="budget-amount">0</span></h4>
+                      </div>
+                      <div class="col-4 text-center ">
+                       <h6 class="text-uppercase info-title text-uppercase info-title text-md font-weight-bold text-success text-uppercase mb-1">expenses</h6>
+                       <span class="expense-icon"><i class="far fa-credit-card text-success"></i></span>
+                       <h4 class="text-uppercase mt-2 expense" id="expense"><span>$ </span><span id="expense-amount">0</span></h4>
+                      </div>
+                      <div class="col-4 text-center ">
+                       <h6 class="text-uppercase info-title text-uppercase info-title text-md font-weight-bold text-success text-uppercase mb-1">balance</h6>
+                       <span class="balance-icon"><i class="fas fa-dollar-sign text-success"></i></span>
+                       <h4 class="text-uppercase mt-2 balance" id="balance"> <span>$ </span><span id="balance-amount">0</span></h4>
+                      </div>
+                     </div>
                   </div>
+                  <!-- expense list -->
+      <div class="expense-list p-4" id="expense-list">
+
+          <div class="expense-list__info d-flex justify-content-between text-capitalize">
+           <h5 class="col-6 list-item text-center">expense title</h5>
+           <h5 class="col 6 list-item text-center">expense value</h5>
+           <h5 class="list-item"></h5>
+          </div>
+          <!-- single expense -->
+   
+          <!-- <div class="expense">
+           <div class="expense-item d-flex justify-content-between align-items-baseline">
+   
+            <h6 class="expense-title mb-0 text-uppercase list-item">- title</h6>
+            <h5 class="expense-amount mb-0 list-item">amount</h5>
+   
+            <div class="expense-icons list-item">
+   
+             <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
+              <i class="fas fa-edit"></i>
+             </a>
+             <a href="#" class="delete-icon" data-id="${expense.id}">
+              <i class="fas fa-trash"></i>
+             </a>
+            </div>
+           </div>
+   
+          </div> -->
+   
+          <!-- end of single expense -->
+   
+         </div>
               </div>
             </div>
         </div>
